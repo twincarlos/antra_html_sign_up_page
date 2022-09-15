@@ -41,10 +41,12 @@ input:focus {
 span#i-agree {
     width: 30%;
     margin-right: 100px;
+    display: flex;
+    flex-direction: row;
 }
 
 span#i-agree > p {
-    width: 60px;
+    width: 80px;
     font-weight: 600;
 }
 
@@ -58,20 +60,32 @@ button {
     cursor: pointer;
 }
 
-button#register {
+#button--blue {
     background-color: rgb(0, 136, 255);
     transition: .5s;
 }
 
-button#register:hover {
+#button--blue:hover {
     background-color: rgb(0, 68, 255);
 }
 
-button#sign-in {
+#button--green {
     background-color: rgb(55, 196, 0);
     transition: .5s;
 }
 
-button#sign-in:hover {
+#button--green:hover {
     background-color: rgb(45, 160, 0);
+}
+
+@media screen and (max-width: 800px) {
+    span {
+        flex-direction: column;
+    }
+    span > input {
+        width: 89%;
+    }
+    button {
+        width: 90%;
+    }
 }
